@@ -222,6 +222,8 @@ public class MainActivity extends AppCompatActivity {
                             weatherData += "Sunrise Time: " + formatter.format(sunriseTime) + "\n";
                             weatherData += "Sunset Time: " + formatter.format(sunsetTime) + "\n\n";
 
+                            System.out.println("test changes");
+
                             // set moon icon
                             String moonPhaseName = "Full Moon";
                             float moonPhase = Float.parseFloat(dailyWeather.getString("moonPhase"));
