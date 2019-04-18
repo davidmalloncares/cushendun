@@ -20,8 +20,13 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.Reader;
+import java.io.StringReader;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -72,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
         // test celestial data
         String night_sky_url = "https://aa.usno.navy.mil/cgi-bin/aa_ssconf2.pl?form=2&year=2019&month=4&day=16&hr=0&min=0&sec=0.0&intv_mag=1.0&intv_unit=1&reps=1&place=&lon_sign=-1&lon_deg=6&lon_min=2&lon_sec=31&lat_sign=1&lat_deg=55&lat_min=7&lat_sec=28&height=0";
+        //String night_sky_url = "https://www.timeanddate.com/astronomy/night/uk/belfast";
         setNightData(night_sky_url);
     }
 
@@ -88,8 +94,32 @@ public class MainActivity extends AppCompatActivity {
                         String[] data = response.split("\\(UT1\\)");
                         String tableData = data[1];
                         String[] data2 = tableData.split("</pre>");
+                        String rawPlanetData = data2[0];
+                        ArrayList<String> planetList =new ArrayList<String>();
 
-                        System.out.println("\n\ndata[1]="+data2[0]);
+                        try {
+                            Reader inputString = new StringReader(rawPlanetData);
+                            BufferedReader br = new BufferedReader(inputString);
+
+                        String line;
+                        while ((line = br.readLine()) != null) {
+                            planetList.add(line);
+                        } }
+                        catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                        //System.out.println("\n\nrawPlanetData="+rawPlanetData);
+
+                        for (String line : planetList) {
+                            //System.out.println("line = "+line+"<");
+                            String[] splitLine = line.split("\\s{2,4}");
+
+                            if (splitLine[0].contains("Pluto2")) {
+                                for (String item : splitLine) {
+                                    System.out.println("\t item="+item+"<");
+                                }
+                            }
+                        }
                     }
                 }, new Response.ErrorListener() {
             @Override
@@ -207,9 +237,10 @@ public class MainActivity extends AppCompatActivity {
                                     weatherIcon.setImageResource(R.drawable.cloud);
                             }
 
-                            System.out.println("weatherIconValue="+weatherIconValue+".");
                             dailyWeather = dataa.getJSONObject(0);
-                            weatherData += "Summary: " + dailyWeather.getString("summary") + "\n\n";
+                            String summary = dailyWeather.getString("summary");
+                            weatherData += "Summary: " + summary + "\n\n";
+                            System.out.println("weatherIconValue="+weatherIconValue+", summary="+summary);
 
                             // format date/times
                             long sunRiseEpoch = Long.parseLong( dailyWeather.getString("sunriseTime") );
@@ -240,7 +271,7 @@ public class MainActivity extends AppCompatActivity {
                                 moonPhaseName = "Waxing Gibbous";
                             } else if (moonPhase >= 0.5  && moonPhase < 0.625) {
                                 phaseIconId = R.drawable.full_moon;
-                                moonPhaseName = "Full Monn";
+                                moonPhaseName = "Full Moon";
                             } else if (moonPhase >= 0.625 && moonPhase < 0.75) {
                                 phaseIconId = R.drawable.waning_gibbous;
                                 moonPhaseName = "Waning Gibbous";
