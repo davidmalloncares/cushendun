@@ -114,26 +114,22 @@ public class MainActivity extends AppCompatActivity {
                         ArrayList<MoonData> moonDataSet = new ArrayList<MoonData>(rows.size());
 
                         // initialise list of data - by column
-                        for (int i = 0; i < rows.size(); i++) {
-                            Elements cols = rows.get(i).select("td");
+                        Elements cols = rows.get(0).select("td");
+                        for (int i = 0; i < cols.size(); i++) {
                             MoonData moonData = new MoonData();
-                            moonData.phase = cols.get(0).text();
+                            moonData.phase = cols.get(i).text();
                             moonDataSet.add(moonData);
                         }
-                        for (int i = 1; i < rows.size(); i++) {
-                            Elements cols = rows.get(i).select("td");
+                        cols = rows.get(2).select("td");
+                        for (int i = 0; i < cols.size(); i++) {
                             MoonData moonData = moonDataSet.get(i);
-                            moonData.datetime = cols.get(1).text();
-                        }
-
-                        for (MoonData moonData : moonDataSet) {
-                           moonData.showData();
+                            moonData.datetime = cols.get(i).text();
                         }
                     }
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                System.out.println("That didn't work!");
+                System.out.println("Getting moon data - that didn't work! - " + error.getMessage());
             }
         });
 
