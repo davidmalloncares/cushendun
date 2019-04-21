@@ -7,22 +7,22 @@
     format="10"
     ir-eligibility="COMPATIBLE"
     plugin-version="3.3.2"
-    timestamp="1555581425620"
+    timestamp="1555870043831"
     token="5606759995105607355"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="154" />
+        duration="128" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="37" />
+        duration="23" />
     <task
         name="verifier"
-        duration="12" />
+        duration="2" />
 
     <artifact
         location="/Users/david.mallon/AndroidStudioProjects/Cushendun/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
@@ -30,7 +30,7 @@
 
     <build
         build-mode="FULL"
-        timestamp="1555573834123"
+        timestamp="1555867944643"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/david.mallon/AndroidStudioProjects/Cushendun/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
@@ -75,7 +75,7 @@
     <build
         build-mode="COLD"
         ir-eligibility="COMPATIBLE"
-        timestamp="1555581425620"
+        timestamp="1555870043831"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/david.mallon/AndroidStudioProjects/Cushendun/app/build/intermediates/split-apk/debug/slices/slice_4.apk"

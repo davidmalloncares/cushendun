@@ -19,11 +19,11 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.Reader;
-import java.io.StringReader;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -53,9 +53,11 @@ public class MainActivity extends AppCompatActivity {
         String dms_long = "6 deg 2 min 31.02 sec W";
 
         // set the date
-        SimpleDateFormat formatter= new SimpleDateFormat("dd/mm/yyyy 'at' HH:mm a");
+        SimpleDateFormat formatter= new SimpleDateFormat("dd/MM/YYYY 'at' HH:mm a");
         Date date = new Date(System.currentTimeMillis());
+        System.out.println("unformatted date="+date);
         String currentDateTime = formatter.format(date);
+        System.out.println("formatted date="+currentDateTime);
         TextView dateView = findViewById(R.id.dateView);
         dateView.setText("Current date/time: "+currentDateTime);
 
@@ -64,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
         String tidal_api_key = BuildConfig.TidalAPIKey;
         String tidal_url = "https://admiraltyapi.azure-api.net/uktidalapi/api/V1/Stations/0644/TidalEvents?duration=1";
 
+        System.out.println("tidal_url="+tidal_url);
         setTideData(tidal_url, tidal_api_key, tideInfo);
 
         // set weather data
@@ -72,52 +75,122 @@ public class MainActivity extends AppCompatActivity {
         ImageView moonIcon = findViewById(R.id.moonIcon);
 
         String dark_sky_api_key = BuildConfig.DarkSkyAPIKey;
-        String weather_url = "https://api.darksky.net/forecast/" + dark_sky_api_key + "/"+cushendun_lat+","+cushendun_long+"?units=si&exclude=minutely,hourly,currently,alerts,flags";
+        String weather_url = "https://api.darksky.net/forecast/" + dark_sky_api_key + "/"+cushendun_lat+","+cushendun_long+"?units=si&exclude=minutely,currently,alerts,flags";
         setWeatherData(weather_url, weatherInfo, weatherIcon, moonIcon);
 
         // test celestial data
-        String night_sky_url = "https://aa.usno.navy.mil/cgi-bin/aa_ssconf2.pl?form=2&year=2019&month=4&day=16&hr=0&min=0&sec=0.0&intv_mag=1.0&intv_unit=1&reps=1&place=&lon_sign=-1&lon_deg=6&lon_min=2&lon_sec=31&lat_sign=1&lat_deg=55&lat_min=7&lat_sec=28&height=0";
-        //String night_sky_url = "https://www.timeanddate.com/astronomy/night/uk/belfast";
+        //String night_sky_url = "https://aa.usno.navy.mil/cgi-bin/aa_ssconf2.pl?form=2&year=2019&month=4&day=16&hr=0&min=0&sec=0.0&intv_mag=1.0&intv_unit=1&reps=1&place=&lon_sign=-1&lon_deg=6&lon_min=2&lon_sec=31&lat_sign=1&lat_deg=55&lat_min=7&lat_sec=28&height=0";
+        String night_sky_url = "https://www.timeanddate.com/astronomy/night/uk/belfast";
         setNightData(night_sky_url);
+
+        String moonDataUrl = "https://www.timeanddate.com/moon/phases/uk/belfast";
+        setMoonData(moonDataUrl);
     }
 
-    private void setNightData(String url) {
+    private void setMoonData(String url) {
         // Instantiate the RequestQueue.
         final RequestQueue queue = Volley.newRequestQueue(this);
 
+        class MoonData {
+            String phase = "";
+            String datetime = "";
+
+            public void showData() {
+                String data = "Phase: "+phase+", Date/Time: "+ datetime;
+                System.out.println("Moon data= "+data);
+            }
+        }
         // Request a response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        // Display the first 500 characters of the response string.
-                        String[] data = response.split("\\(UT1\\)");
-                        String tableData = data[1];
-                        String[] data2 = tableData.split("</pre>");
-                        String rawPlanetData = data2[0];
-                        ArrayList<String> planetList =new ArrayList<String>();
 
-                        try {
-                            Reader inputString = new StringReader(rawPlanetData);
-                            BufferedReader br = new BufferedReader(inputString);
+                        Document doc = Jsoup.parse(response);
+                        Element table = doc.getElementById("mn-cyc");
+                        Elements rows = table.select("tr");
 
-                        String line;
-                        while ((line = br.readLine()) != null) {
-                            planetList.add(line);
-                        } }
-                        catch (IOException e) {
-                            e.printStackTrace();
+                        //System.out.println("table data="+table.toString()+", rows="+rows.size());
+                        ArrayList<MoonData> moonDataSet = new ArrayList<MoonData>(rows.size());
+
+                        // initialise list of data - by column
+                        for (int i = 0; i < rows.size(); i++) {
+                            Elements cols = rows.get(i).select("td");
+                            MoonData moonData = new MoonData();
+                            moonData.phase = cols.get(0).text();
+                            moonDataSet.add(moonData);
                         }
-                        //System.out.println("\n\nrawPlanetData="+rawPlanetData);
+                        for (int i = 1; i < rows.size(); i++) {
+                            Elements cols = rows.get(i).select("td");
+                            MoonData moonData = moonDataSet.get(i);
+                            moonData.datetime = cols.get(1).text();
+                        }
 
-                        for (String line : planetList) {
-                            //System.out.println("line = "+line+"<");
-                            String[] splitLine = line.split("\\s{2,4}");
+                        for (MoonData moonData : moonDataSet) {
+                           moonData.showData();
+                        }
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                System.out.println("That didn't work!");
+            }
+        });
 
-                            if (splitLine[0].contains("Pluto2")) {
-                                for (String item : splitLine) {
-                                    System.out.println("\t item="+item+"<");
-                                }
+        // Add the request to the RequestQueue.
+        queue.add(stringRequest);
+    }
+
+    private void setNightData(final String url) {
+        // Instantiate the RequestQueue.
+        final RequestQueue queue = Volley.newRequestQueue(this);
+
+        class PlanetData {
+            String name = "";
+            String rise = "";
+            String set = "";
+            String meridian = "";
+            String comment = "";
+
+            public void showData() {
+                String data = "Name: "+name+", rise: "+ rise+", set: "+set+", meridian: "+meridian+", comment: "+comment;
+                System.out.println("Planet data= "+data);
+            }
+        }
+        // Request a response from the provided URL.
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+
+                        Document doc = Jsoup.parse(response);
+                        Element table = doc.select("table").get(0); //select the first table.
+                        Elements rows = table.select("tr");
+
+                        ArrayList<PlanetData> planets = new ArrayList<PlanetData>();
+                        for (int i = 0; i < rows.size(); i++) {
+                            Element row = rows.get(i);
+                            Elements cols = row.select("td");
+
+                            Elements headers = row.select("th");
+                            //System.out.println("header="+headers.get(0).text());
+
+                            //System.out.println("row["+i+"]="+row.toString());
+                            if ( cols.size() > 0) {
+                                //System.out.println("cols0="+cols.get(0).text());
+
+                                PlanetData planet = new PlanetData();
+                                planet.name = headers.get(0).text();
+                                planet.rise = cols.get(0).text();
+                                planet.set = cols.get(1).text();
+                                planet.meridian = cols.get(2).text();
+                                planet.comment = cols.get(3).text();
+
+                                //planet.showData();
+
+                                planets.add(planet);
+                            } else {
+                                System.out.println("no cols");
                             }
                         }
                     }
@@ -141,7 +214,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onResponse(JSONArray response) {
-
+                System.out.println("Tide response="+response.toString());
                 String tidalData = "";
 
                 for (int i=0; i<response.length(); i++)
@@ -158,6 +231,7 @@ public class MainActivity extends AppCompatActivity {
                         tidalData += type + " occurs at " + shortTime.format(tideData) + "\n";
                     } catch (JSONException | ParseException e) {
                         e.printStackTrace();
+                        System.out.println("Error getting tide data - "+e.getMessage());
                     }
                 }
 
@@ -196,12 +270,15 @@ public class MainActivity extends AppCompatActivity {
                     public void onResponse(JSONObject response) {
 
                         JSONObject dailyWeather = null;
+                        JSONObject hourlyWeather = null;
                         String weatherData = "";
                         try {
                             dailyWeather = response.getJSONObject("daily");
+                            hourlyWeather = response.getJSONObject("hourly");
+                            System.out.println("dailyWeather="+dailyWeather+"<");
                             JSONArray dataa = dailyWeather.getJSONArray("data");
 
-                            String weatherIconValue = dailyWeather.getString("icon");
+                            String weatherIconValue = hourlyWeather.getString("icon");
                             switch(weatherIconValue) {
                                 case "cloud":
                                     weatherIcon.setImageResource(R.drawable.cloud);
@@ -238,7 +315,7 @@ public class MainActivity extends AppCompatActivity {
                             }
 
                             dailyWeather = dataa.getJSONObject(0);
-                            String summary = dailyWeather.getString("summary");
+                            String summary = hourlyWeather.getString("summary");
                             weatherData += "Summary: " + summary + "\n\n";
                             System.out.println("weatherIconValue="+weatherIconValue+", summary="+summary);
 
@@ -295,6 +372,7 @@ public class MainActivity extends AppCompatActivity {
                             weatherData += "Low temp: " + dailyWeather.getString("temperatureLow") + (char) 0x00B0 + "C\n";
                         } catch (JSONException e) {
                             e.printStackTrace();
+                            System.out.println("Bombed out getting weather data - "+e.getMessage());
                         }
                         weatherTextView.setText(weatherData);
                     }
@@ -302,7 +380,7 @@ public class MainActivity extends AppCompatActivity {
 
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        // TODO: Handle error
+                        System.out.println("Failure to get weather info - "+error.getMessage());
 
                     }
                 });
