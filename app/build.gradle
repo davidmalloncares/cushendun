@@ -18,6 +18,7 @@ android {
         buildTypes.each {
             it.buildConfigField 'String', 'DarkSkyAPIKey', dark_sky_api_key
             it.buildConfigField 'String', 'TidalAPIKey', tidal_api_key
+            it.buildConfigField 'String', 'StormGlassAPIKey', storm_glass_api_key
         }
     }
 }

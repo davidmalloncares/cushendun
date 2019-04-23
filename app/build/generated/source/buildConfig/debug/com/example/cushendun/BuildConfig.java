@@ -12,5 +12,6 @@ public final class BuildConfig {
   public static final String VERSION_NAME = "1.0";
   // Fields from build type: debug
   public static final String DarkSkyAPIKey = "f54462f8caf4f95cd9b40b8719ad9a2c";
+  public static final String StormGlassAPIKey = "d7f0f646-65c7-11e9-a84f-0242ac130004-d7f0f736-65c7-11e9-a84f-0242ac130004";
   public static final String TidalAPIKey = "ac735196b82f4072aded313b5e8dcc8f";
 }

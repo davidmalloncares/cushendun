@@ -1092,6 +1092,7 @@ id clip_horizontal
 id clip_vertical
 id collapseActionView
 id constraintLayout
+id constraintLayout2
 id container
 id content
 id contentPanel
@@ -1252,6 +1253,8 @@ id useLogo
 id view_offset_helper
 id view_pager
 id visible
+id waveInfo
+id waveLabel
 id weatherIcon
 id weatherInfo
 id withText

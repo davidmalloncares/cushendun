@@ -70,29 +70,4 @@
         app:layout_constraintTop_toBottomOf="@+id/weatherIcon"
         app:srcCompat="@android:color/background_light" />
 
-    <TextView
-        android:id="@+id/tideInfo"
-        android:layout_width="373dp"
-        android:layout_height="123dp"
-        android:layout_marginTop="16dp"
-        android:text="TextView"
-        app:fontFamily="sans-serif-medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.157"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tideLabel" />
-
-    <TextView
-        android:id="@+id/tideLabel"
-        android:layout_width="294dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="24dp"
-        android:text="Local Tide Info"
-        android:textSize="18sp"
-        app:fontFamily="sans-serif-medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/weatherInfo"
-        tools:text="Local Tide Info" />
 </android.support.constraint.ConstraintLayout>

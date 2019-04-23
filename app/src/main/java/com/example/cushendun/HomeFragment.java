@@ -13,7 +13,6 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
@@ -26,12 +25,9 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 
 public class HomeFragment extends Fragment implements View.OnClickListener {
 
@@ -70,14 +66,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         System.out.println("formatted date="+currentDateTime);
         TextView dateView = view.findViewById(R.id.dateView);
         dateView.setText("Current date/time: "+currentDateTime);
-
-        // set the tide data
-        TextView tideInfo = view.findViewById(R.id.tideInfo);
-        String tidal_api_key = BuildConfig.TidalAPIKey;
-        String tidal_url = "https://admiraltyapi.azure-api.net/uktidalapi/api/V1/Stations/0644/TidalEvents?duration=1";
-
-        System.out.println("tidal_url="+tidal_url);
-        setTideData(tidal_url, tidal_api_key, tideInfo);
 
         // set weather data
         TextView weatherInfo = view.findViewById(R.id.weatherInfo);
@@ -338,58 +326,5 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
         // Add the request to the RequestQueue.
         queue.add(jsonObjectRequest);
-    }
-
-    private void setTideData(String url, final String tidal_api_key, final TextView tideInfo) {
-        // Instantiate the RequestQueue.
-        final RequestQueue queue = Volley.newRequestQueue(getActivity().getApplicationContext());
-
-        // Request a json response from the provided URL.
-        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(url, new Response.Listener<JSONArray>() {
-
-            @Override
-            public void onResponse(JSONArray response) {
-                System.out.println("Tide response="+response.toString());
-                String tidalData = "";
-
-                for (int i=0; i<response.length(); i++)
-                {
-                    try {
-                        JSONObject tideInfo = response.getJSONObject(i);
-                        String type = tideInfo.getString("EventType");
-                        String date = tideInfo.getString("DateTime");
-
-                        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:sss");
-                        Date tideData = formatter.parse(date);
-                        SimpleDateFormat shortTime = new SimpleDateFormat("hh:mm a");
-
-                        tidalData += type + " occurs at " + shortTime.format(tideData) + "\n";
-                    } catch (JSONException | ParseException e) {
-                        e.printStackTrace();
-                        System.out.println("Error getting tide data - "+e.getMessage());
-                    }
-                }
-
-                tideInfo.setText(tidalData);
-            }
-        }, new Response.ErrorListener() {
-
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                // TODO: Handle error
-                System.out.println("bombed out gathering tide data - "+error.getMessage());
-            }
-        }) {
-
-            @Override
-            public Map getHeaders() {
-                HashMap headers = new HashMap();
-                headers.put("Ocp-Apim-Subscription-Key", tidal_api_key);
-                return headers;
-            }
-        };
-
-        // Add the request to the RequestQueue.
-        queue.add(jsonArrayRequest);
     }
 }
