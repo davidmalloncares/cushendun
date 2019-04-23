@@ -29,6 +29,8 @@ import java.util.Map;
 public class TideFragment extends Fragment {
 
     View masterView = null;
+    String waveHeight = null;
+    String waterTemp = null;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup viewGroup, Bundle savedInstanceState){
@@ -68,7 +70,12 @@ public class TideFragment extends Fragment {
         long endTime = cal.getTime().getTime() / 1000;
 
         String wave_url = "https://api.stormglass.io/v1/weather/point?lat="+cushendun_lat+"&lng="+cushendun_long+"&params=waterTemperature,waveHeight&start="+startTime+"&end="+startTime+"&source=sg";
-        setWaveData(wave_url, wave_api_key, waveInfo);
+        if (waveHeight == null || waterTemp == null) {
+            setWaveData(wave_url, wave_api_key, waveInfo);
+        } else {
+            System.out.println("already got wave data");
+            waveInfo.setText(getWaveText());
+        }
     }
 
     private void setWaveData(String url, final String wave_api_key, final TextView waveInfo) {
@@ -88,17 +95,15 @@ public class TideFragment extends Fragment {
                             JSONObject hoursItem = (JSONObject) hoursArray.get(0);
                             JSONArray waterTempArray = hoursItem.getJSONArray("waterTemperature");
                             JSONObject waterTempObject = (JSONObject) waterTempArray.get(0);
-                            String waterTemp = waterTempObject.getString("value");
+                            waterTemp = waterTempObject.getString("value");
                             System.out.println("water temp="+waterTemp);
 
                             JSONArray waveHeightArray = hoursItem.getJSONArray("waveHeight");
                             JSONObject waveHeightObject = (JSONObject) waveHeightArray.get(0);
-                            String waveHeight = waveHeightObject.getString("value");
+                            waveHeight = waveHeightObject.getString("value");
                             System.out.println("wave height="+waveHeight);
 
-                            waveData = "Current wave height: "+waveHeight+" meters\n";
-                            waveData += "Current water temp: "+waterTemp+" "+(char) 0x00B0 + "C";
-                            waveInfo.setText(waveData);
+                            waveInfo.setText(getWaveText());
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -121,6 +126,12 @@ public class TideFragment extends Fragment {
 
         // Add the request to the RequestQueue.
         queue.add(jsonObjectRequest);
+    }
+
+    private String getWaveText() {
+        String waveData = "Current wave height: "+waveHeight+" meters\n";
+        waveData += "Current water temp: "+waterTemp+" "+(char) 0x00B0 + "C";
+        return waveData;
     }
 
     private void setTideData(String url, final String tidal_api_key, final TextView tideInfo) {

@@ -214,7 +214,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                         try {
                             dailyWeather = response.getJSONObject("daily");
                             hourlyWeather = response.getJSONObject("hourly");
-                            System.out.println("dailyWeather="+dailyWeather+"<");
+                            System.out.println("hourlyWeather="+hourlyWeather+"<");
                             JSONArray dataa = dailyWeather.getJSONArray("data");
 
                             String weatherIconValue = hourlyWeather.getString("icon");
@@ -254,6 +254,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                             }
 
                             dailyWeather = dataa.getJSONObject(0);
+                            System.out.println("dailyWeather="+dailyWeather);
                             String summary = hourlyWeather.getString("summary");
                             weatherData += "Summary: " + summary + "\n\n";
                             System.out.println("weatherIconValue="+weatherIconValue+", summary="+summary);
@@ -308,7 +309,13 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                             weatherData += "Chance of precipitation (" + dailyWeather.getString("precipType") + "): " + chanceOfPrec + "%\n\n";
 
                             weatherData += "High temp: " + dailyWeather.getString("temperatureHigh") + (char) 0x00B0 + "C\n";
-                            weatherData += "Low temp: " + dailyWeather.getString("temperatureLow") + (char) 0x00B0 + "C\n";
+                            weatherData += "Low temp: " + dailyWeather.getString("temperatureLow") + (char) 0x00B0 + "C\n\n";
+
+                            String windGust = dailyWeather.getString("windGust");
+                            String windBearing = dailyWeather.getString("windBearing");
+                            String compassBearing = getCompassBearing(windBearing);
+
+                            weatherData += "Wind speed: "+windGust+" mph from " + compassBearing + "\n";
                         } catch (JSONException e) {
                             e.printStackTrace();
                             System.out.println("Bombed out getting weather data - "+e.getMessage());
@@ -326,5 +333,50 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
         // Add the request to the RequestQueue.
         queue.add(jsonObjectRequest);
+    }
+
+    private String getCompassBearing(String windBearing) {
+        int numWindBearing = Integer.parseInt(windBearing);
+
+        String compassBearing = "N";
+        if ((numWindBearing >= 348.76 && numWindBearing <= 360) || (numWindBearing >= 0 && numWindBearing <= 11.25)) {
+            compassBearing = "N";
+        } else if (numWindBearing >= 11.26 && numWindBearing < 33.75) {
+            compassBearing = "NNE";
+        } else if (numWindBearing >= 33.75 && numWindBearing < 56.25) {
+            compassBearing = "NE";
+        } else if (numWindBearing >= 56.25 && numWindBearing < 78.75) {
+            compassBearing = "ENE";
+        } else if (numWindBearing >= 78.75  && numWindBearing < 101.25) {
+            compassBearing = "E";
+        } else if (numWindBearing >= 101.25 && numWindBearing < 123.75) {
+            compassBearing = "ESE";
+        } else if (numWindBearing >= 123.75  && numWindBearing < 146.25) {
+            compassBearing = "SE";
+        } else if (numWindBearing >= 146.75  && numWindBearing < 146.25) {
+            compassBearing = "SE";
+        } else if (numWindBearing >= 123.75  && numWindBearing < 168.75) {
+            compassBearing = "SSE";
+        } else if (numWindBearing >= 168.75  && numWindBearing < 191.25) {
+            compassBearing = "S";
+        } else if (numWindBearing >= 191.25  && numWindBearing < 213.75) {
+            compassBearing = "SSW";
+        } else if (numWindBearing >= 213.75  && numWindBearing < 236.25) {
+            compassBearing = "SW";
+        } else if (numWindBearing >= 236.25  && numWindBearing < 258.75) {
+            compassBearing = "WSW";
+        } else if (numWindBearing >= 258.75  && numWindBearing < 281.25) {
+            compassBearing = "W";
+        } else if (numWindBearing >= 281.25  && numWindBearing < 303.75) {
+            compassBearing = "WNW";
+        } else if (numWindBearing >= 303.75  && numWindBearing < 326.25) {
+            compassBearing = "NW";
+        } else if (numWindBearing >= 326.25  && numWindBearing < 348.75) {
+            compassBearing = "NNW";
+        } else {
+            compassBearing = "Unknown bearing - " + numWindBearing;
+        }
+
+        return compassBearing;
     }
 }
