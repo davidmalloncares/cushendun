@@ -1093,10 +1093,14 @@ id clip_vertical
 id collapseActionView
 id constraintLayout
 id constraintLayout2
+id constraintLayout3
+id constraintLayout4
 id container
 id content
 id contentPanel
 id coordinator
+id currentMoonIcon
+id currentMoonLabel
 id custom
 id customPanel
 id dateView
@@ -1149,7 +1153,6 @@ id masked
 id message
 id middle
 id mini
-id moonIcon
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
@@ -1168,6 +1171,8 @@ id parentPanel
 id parent_matrix
 id percent
 id pin
+id planetsVisible
+id planetsVisibleLabel
 id progress_circular
 id progress_horizontal
 id radio
@@ -1226,7 +1231,6 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
-id textView
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -1249,6 +1253,8 @@ id transition_transform
 id uniform
 id unlabeled
 id up
+id upcomingMoonLabel
+id upcomingMoonPhases
 id useLogo
 id view_offset_helper
 id view_pager

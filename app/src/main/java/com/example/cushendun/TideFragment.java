@@ -47,15 +47,11 @@ public class TideFragment extends Fragment {
         String cushendun_long = "-6.041950";
         String cushendun_lat = "55.124710";
 
-        String dms_lat = "55 deg 7 m 28.956 s N";
-        String dms_long = "6 deg 2 min 31.02 sec W";
-
         // set the tide data
         TextView tideInfo = view.findViewById(R.id.tideInfo);
         String tidal_api_key = BuildConfig.TidalAPIKey;
         String tidal_url = "https://admiraltyapi.azure-api.net/uktidalapi/api/V1/Stations/0644/TidalEvents?duration=1";
 
-        System.out.println("tidal_url="+tidal_url);
         setTideData(tidal_url, tidal_api_key, tideInfo);
 
         // set wave data
@@ -87,7 +83,6 @@ public class TideFragment extends Fragment {
 
                     @Override
                     public void onResponse(JSONObject response) {
-                        System.out.println("Wave response="+response.toString());
                         String waveData = "";
                         try {
                             JSONArray hoursArray = response.getJSONArray("hours");
@@ -96,12 +91,10 @@ public class TideFragment extends Fragment {
                             JSONArray waterTempArray = hoursItem.getJSONArray("waterTemperature");
                             JSONObject waterTempObject = (JSONObject) waterTempArray.get(0);
                             waterTemp = waterTempObject.getString("value");
-                            System.out.println("water temp="+waterTemp);
 
                             JSONArray waveHeightArray = hoursItem.getJSONArray("waveHeight");
                             JSONObject waveHeightObject = (JSONObject) waveHeightArray.get(0);
                             waveHeight = waveHeightObject.getString("value");
-                            System.out.println("wave height="+waveHeight);
 
                             waveInfo.setText(getWaveText());
                         } catch (JSONException e) {
@@ -143,7 +136,6 @@ public class TideFragment extends Fragment {
 
             @Override
             public void onResponse(JSONArray response) {
-                System.out.println("Tide response="+response.toString());
                 String tidalData = "";
 
                 for (int i=0; i<response.length(); i++)
