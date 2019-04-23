@@ -4,14 +4,17 @@ ADDED from /Users/david.mallon/AndroidStudioProjects/Cushendun/app/src/main/Andr
 INJECTED from /Users/david.mallon/AndroidStudioProjects/Cushendun/app/src/main/AndroidManifest.xml:2:1-22:12
 INJECTED from /Users/david.mallon/AndroidStudioProjects/Cushendun/app/src/main/AndroidManifest.xml:2:1-22:12
 INJECTED from /Users/david.mallon/AndroidStudioProjects/Cushendun/app/src/main/AndroidManifest.xml:2:1-22:12
-MERGED from [com.android.volley:volley:1.1.1] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/volley-1.1.1.aar/9900ec0944c3f4f56ac28924935d0272/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:design:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/521b8584ea32d70a37e612ec216f5c9e/AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/44691d11e5b8a6dce9b09dc6c779b6b2/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/d8a1ef46b4b2155a200f8ca040b73dd6/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.volley:volley:1.1.1] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/volley-1.1.1.aar/9900ec0944c3f4f56ac28924935d0272/AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:support-fragment:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/ba15aa61d2dd81347686f6a351ffc865/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/7fe68b19c131a18fea8a0501f3ee87a3/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/6238f47ca5eaacf655a18333dc9a81e4/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-core-ui:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/941a6f18f84c79972ba8489947ef34d1/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-core-utils:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/0107d68b6021cf2c55784224e6d8109f/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/71b663eaa9d9ffd12cd0427454054f66/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/f962e6a925ad7c4b995c420d4bed2d50/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:loader:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/444536032c3c42d36982d1a0eb601fe4/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:viewpager:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/2ccdd0f68b618fb30c6a7698bd47b0da/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/2252a4ac20823cb162ff5a3ffa4854d9/AndroidManifest.xml:17:1-22:12
@@ -23,15 +26,16 @@ MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/david.mallon
 MERGED from [com.android.support:support-compat:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/5bd6306deb616babe49f4ec2938b3108/AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/6b947f3e313942b292d7c209eb31d098/AndroidManifest.xml:17:1-25:12
 MERGED from [com.android.support:cursoradapter:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/c4e5e61243dcdbe48612060db74a444d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/517b37417965faba4d80397b76616768/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/1fd270b7cc35af7e45aa87217d2f2b66/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:documentfile:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/b26ee3bfc83da71a03b9a59e1e76ad61/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/a159f6376e64ce36cab3d3e4db363476/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:print:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/286df789e5a2228594f08c035414182b/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/3fa72cdde19e12db6ec125d2e61e3830/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/ba309becd6ef14b78e40688de46464ff/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/90d91a2a6652d1e060bb266f48dc1e67/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/07f5d92c089a9886d07fb9fe6c8655d6/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/9bbb1045079927a008cf8c14dc0fbdaf/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:interpolator:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/ba309becd6ef14b78e40688de46464ff/AndroidManifest.xml:17:1-22:12
 INJECTED from /Users/david.mallon/AndroidStudioProjects/Cushendun/app/src/main/AndroidManifest.xml:2:1-22:12
 INJECTED from /Users/david.mallon/AndroidStudioProjects/Cushendun/app/src/main/AndroidManifest.xml:2:1-22:12
 INJECTED from /Users/david.mallon/AndroidStudioProjects/Cushendun/app/src/main/AndroidManifest.xml:2:1-22:12
@@ -59,10 +63,12 @@ ADDED from /Users/david.mallon/AndroidStudioProjects/Cushendun/app/src/main/Andr
 		ADDED from /Users/david.mallon/AndroidStudioProjects/Cushendun/app/src/main/AndroidManifest.xml:5:22-76
 application
 ADDED from /Users/david.mallon/AndroidStudioProjects/Cushendun/app/src/main/AndroidManifest.xml:6:5-20:19
-MERGED from [com.android.volley:volley:1.1.1] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/volley-1.1.1.aar/9900ec0944c3f4f56ac28924935d0272/AndroidManifest.xml:9:5-20
-MERGED from [com.android.volley:volley:1.1.1] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/volley-1.1.1.aar/9900ec0944c3f4f56ac28924935d0272/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:design:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/521b8584ea32d70a37e612ec216f5c9e/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/521b8584ea32d70a37e612ec216f5c9e/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/d8a1ef46b4b2155a200f8ca040b73dd6/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/d8a1ef46b4b2155a200f8ca040b73dd6/AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:volley:1.1.1] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/volley-1.1.1.aar/9900ec0944c3f4f56ac28924935d0272/AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:volley:1.1.1] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/volley-1.1.1.aar/9900ec0944c3f4f56ac28924935d0272/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:support-compat:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/5bd6306deb616babe49f4ec2938b3108/AndroidManifest.xml:22:5-94
 MERGED from [com.android.support:support-compat:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/5bd6306deb616babe49f4ec2938b3108/AndroidManifest.xml:22:5-94
 MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/6b947f3e313942b292d7c209eb31d098/AndroidManifest.xml:22:5-23:19
@@ -99,22 +105,28 @@ uses-sdk
 INJECTED from /Users/david.mallon/AndroidStudioProjects/Cushendun/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/david.mallon/AndroidStudioProjects/Cushendun/app/src/main/AndroidManifest.xml
 INJECTED from /Users/david.mallon/AndroidStudioProjects/Cushendun/app/src/main/AndroidManifest.xml
-MERGED from [com.android.volley:volley:1.1.1] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/volley-1.1.1.aar/9900ec0944c3f4f56ac28924935d0272/AndroidManifest.xml:7:5-43
-MERGED from [com.android.volley:volley:1.1.1] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/volley-1.1.1.aar/9900ec0944c3f4f56ac28924935d0272/AndroidManifest.xml:7:5-43
+MERGED from [com.android.support:design:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/521b8584ea32d70a37e612ec216f5c9e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/521b8584ea32d70a37e612ec216f5c9e/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/44691d11e5b8a6dce9b09dc6c779b6b2/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/44691d11e5b8a6dce9b09dc6c779b6b2/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/d8a1ef46b4b2155a200f8ca040b73dd6/AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/d8a1ef46b4b2155a200f8ca040b73dd6/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.volley:volley:1.1.1] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/volley-1.1.1.aar/9900ec0944c3f4f56ac28924935d0272/AndroidManifest.xml:7:5-43
+MERGED from [com.android.volley:volley:1.1.1] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/volley-1.1.1.aar/9900ec0944c3f4f56ac28924935d0272/AndroidManifest.xml:7:5-43
 MERGED from [com.android.support:support-fragment:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/ba15aa61d2dd81347686f6a351ffc865/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-fragment:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/ba15aa61d2dd81347686f6a351ffc865/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/7fe68b19c131a18fea8a0501f3ee87a3/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/7fe68b19c131a18fea8a0501f3ee87a3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/6238f47ca5eaacf655a18333dc9a81e4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/6238f47ca5eaacf655a18333dc9a81e4/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-core-ui:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/941a6f18f84c79972ba8489947ef34d1/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-core-ui:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/941a6f18f84c79972ba8489947ef34d1/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-core-utils:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/0107d68b6021cf2c55784224e6d8109f/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-core-utils:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/0107d68b6021cf2c55784224e6d8109f/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/71b663eaa9d9ffd12cd0427454054f66/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/71b663eaa9d9ffd12cd0427454054f66/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/f962e6a925ad7c4b995c420d4bed2d50/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/f962e6a925ad7c4b995c420d4bed2d50/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:loader:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/444536032c3c42d36982d1a0eb601fe4/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:loader:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/444536032c3c42d36982d1a0eb601fe4/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:viewpager:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/2ccdd0f68b618fb30c6a7698bd47b0da/AndroidManifest.xml:20:5-44
@@ -137,6 +149,8 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/david.mallon
 MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/6b947f3e313942b292d7c209eb31d098/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:cursoradapter:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/c4e5e61243dcdbe48612060db74a444d/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:cursoradapter:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/c4e5e61243dcdbe48612060db74a444d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/517b37417965faba4d80397b76616768/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/517b37417965faba4d80397b76616768/AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/1fd270b7cc35af7e45aa87217d2f2b66/AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/1fd270b7cc35af7e45aa87217d2f2b66/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:documentfile:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/b26ee3bfc83da71a03b9a59e1e76ad61/AndroidManifest.xml:20:5-44
@@ -147,14 +161,14 @@ MERGED from [com.android.support:print:28.0.0] /Users/david.mallon/.gradle/cache
 MERGED from [com.android.support:print:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/286df789e5a2228594f08c035414182b/AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/3fa72cdde19e12db6ec125d2e61e3830/AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/3fa72cdde19e12db6ec125d2e61e3830/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/ba309becd6ef14b78e40688de46464ff/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/ba309becd6ef14b78e40688de46464ff/AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/90d91a2a6652d1e060bb266f48dc1e67/AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/90d91a2a6652d1e060bb266f48dc1e67/AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/07f5d92c089a9886d07fb9fe6c8655d6/AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/07f5d92c089a9886d07fb9fe6c8655d6/AndroidManifest.xml:20:5-44
 MERGED from [android.arch.core:runtime:1.1.1] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/9bbb1045079927a008cf8c14dc0fbdaf/AndroidManifest.xml:20:5-44
 MERGED from [android.arch.core:runtime:1.1.1] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/9bbb1045079927a008cf8c14dc0fbdaf/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/ba309becd6ef14b78e40688de46464ff/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] /Users/david.mallon/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/ba309becd6ef14b78e40688de46464ff/AndroidManifest.xml:20:5-44
 INJECTED from /Users/david.mallon/AndroidStudioProjects/Cushendun/app/src/main/AndroidManifest.xml
 INJECTED from /Users/david.mallon/AndroidStudioProjects/Cushendun/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
