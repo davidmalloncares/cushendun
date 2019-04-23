@@ -169,9 +169,7 @@ public class MainActivity extends AppCompatActivity {
                             Elements cols = row.select("td");
 
                             Elements headers = row.select("th");
-                            //System.out.println("header="+headers.get(0).text());
 
-                            //System.out.println("row["+i+"]="+row.toString());
                             if ( cols.size() > 0) {
                                 //System.out.println("cols0="+cols.get(0).text());
 
@@ -186,7 +184,7 @@ public class MainActivity extends AppCompatActivity {
 
                                 planets.add(planet);
                             } else {
-                                System.out.println("no cols");
+                                //System.out.println("no cols");
                             }
                         }
                     }
