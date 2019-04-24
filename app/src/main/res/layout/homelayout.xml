@@ -9,59 +9,285 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp">
 
-    <Button
-        android:id="@+id/button"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="16dp"
-        android:text="Refresh"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
-        android:id="@+id/weatherInfo"
+        android:id="@+id/sunTimesView"
         android:layout_width="382dp"
-        android:layout_height="241dp"
+        android:layout_height="32dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:text="For Cushendun"
         app:fontFamily="sans-serif-medium"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/weatherIcon" />
 
     <ImageView
         android:id="@+id/weatherIcon"
-        android:layout_width="166dp"
-        android:layout_height="163dp"
+        android:layout_width="219dp"
+        android:layout_height="235dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/weatherInfo"
+        app:layout_constraintTop_toBottomOf="@+id/todaysSummary"
         app:srcCompat="@drawable/hot_sun_day" />
 
     <TextView
-        android:id="@+id/dateView"
-        android:layout_width="226dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginLeft="36dp"
-        android:layout_marginTop="16dp"
+        android:id="@+id/todaysSummary"
+        android:layout_width="385dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:text="TextView"
         android:textSize="18sp"
         app:fontFamily="sans-serif-medium"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/windDirection"
+        android:layout_width="96dp"
+        android:layout_height="89dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/weatherIcon"
+        app:layout_constraintTop_toBottomOf="@+id/windSpeedView"
+        app:srcCompat="@drawable/wind_dir_classic" />
+
+    <TextView
+        android:id="@+id/windSpeedView"
+        android:layout_width="164dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toEndOf="@+id/weatherIcon"
+        app:layout_constraintTop_toBottomOf="@+id/todaysSummary" />
+
+    <ImageView
+        android:id="@+id/rainDropIcon"
+        android:layout_width="57dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/weatherIcon"
+        app:layout_constraintTop_toBottomOf="@+id/windDirection"
+        app:srcCompat="@drawable/raindrops" />
+
+    <TextView
+        android:id="@+id/rainDataView"
+        android:layout_width="125dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/weatherIcon"
+        app:layout_constraintTop_toBottomOf="@+id/rainDropIcon" />
+
+    <TextView
+        android:id="@+id/highView"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:textSize="30sp"
+        app:fontFamily="sans-serif-black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/todaysSummary" />
+
+    <TextView
+        android:id="@+id/lowView"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="155dp"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/highView" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="370dp"
+        android:layout_height="6dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sunTimesView" />
+
+    <TextView
+        android:id="@+id/day2DateView"
+        android:layout_width="62dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <TextView
+        android:id="@+id/day3DateView"
+        android:layout_width="62dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/day2DateView"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <TextView
+        android:id="@+id/day4DateView"
+        android:layout_width="62dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="99dp"
+        android:layout_marginLeft="99dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/day3DateView"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <ImageView
+        android:id="@+id/day2Icon"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/day2DateView"
+        app:srcCompat="@drawable/clear_night" />
+
+    <ImageView
+        android:id="@+id/day3Icon"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginLeft="85dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/day2Icon"
+        app:layout_constraintTop_toBottomOf="@+id/day3DateView"
+        app:srcCompat="@drawable/clear_night" />
+
+    <ImageView
+        android:id="@+id/day4Icon"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginLeft="82dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/day3Icon"
+        app:layout_constraintTop_toBottomOf="@+id/day4DateView"
+        app:srcCompat="@drawable/clear_night" />
+
+    <TextView
+        android:id="@+id/day2High"
+        android:layout_width="36dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toEndOf="@+id/day2Icon"
+        app:layout_constraintTop_toBottomOf="@+id/day2DateView" />
+
+    <TextView
+        android:id="@+id/day3High"
+        android:layout_width="36dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toEndOf="@+id/day3Icon"
+        app:layout_constraintTop_toBottomOf="@+id/day3DateView" />
+
+    <TextView
+        android:id="@+id/day4High"
+        android:layout_width="36dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toEndOf="@+id/day4Icon"
+        app:layout_constraintTop_toBottomOf="@+id/day4DateView" />
+
+    <TextView
+        android:id="@+id/day2Low"
+        android:layout_width="36dp"
+        android:layout_height="31dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/day2Icon"
+        app:layout_constraintTop_toBottomOf="@+id/day2High" />
+
+    <TextView
+        android:id="@+id/day3Low"
+        android:layout_width="36dp"
+        android:layout_height="31dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/day3Icon"
+        app:layout_constraintTop_toBottomOf="@+id/day3High" />
+
+    <TextView
+        android:id="@+id/day4Low"
+        android:layout_width="36dp"
+        android:layout_height="31dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/day4Icon"
+        app:layout_constraintTop_toBottomOf="@+id/day4High" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="1dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginRight="23dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toStartOf="@+id/day3Icon"
+        app:layout_constraintStart_toEndOf="@+id/day2High"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="1dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toStartOf="@+id/day4Icon"
+        app:layout_constraintStart_toEndOf="@+id/day3High"
         app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

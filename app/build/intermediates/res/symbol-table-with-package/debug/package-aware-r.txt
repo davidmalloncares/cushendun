@@ -994,6 +994,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable clear_night
 drawable cloud
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
@@ -1030,7 +1031,9 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable partly_cloudy
 drawable rain_cloud
+drawable raindrops
 drawable sleet
 drawable snowflake
 drawable snowing_cloud
@@ -1045,6 +1048,8 @@ drawable waning_gibbous
 drawable waxing_crescent
 drawable waxing_gibbous
 drawable wind
+drawable wind_dir_classic
+drawable wind_direction
 id ALT
 id CTRL
 id FUNCTION
@@ -1080,7 +1085,6 @@ id barrier
 id beginning
 id blocking
 id bottom
-id button
 id buttonPanel
 id center
 id center_horizontal
@@ -1103,7 +1107,18 @@ id currentMoonIcon
 id currentMoonLabel
 id custom
 id customPanel
-id dateView
+id day2DateView
+id day2High
+id day2Icon
+id day2Low
+id day3DateView
+id day3High
+id day3Icon
+id day3Low
+id day4DateView
+id day4High
+id day4Icon
+id day4Low
 id decor_content_parent
 id default_activity_button
 id design_bottom_sheet
@@ -1114,6 +1129,9 @@ id design_navigation_view
 id dimensions
 id direct
 id disableHome
+id divider
+id divider2
+id divider3
 id edit_query
 id end
 id enterAlways
@@ -1131,6 +1149,7 @@ id ghost_view
 id gone
 id group_divider
 id groups
+id highView
 id home
 id homeAsUp
 id icon
@@ -1148,6 +1167,7 @@ id line1
 id line3
 id listMode
 id list_item
+id lowView
 id main_layout
 id masked
 id message
@@ -1176,6 +1196,8 @@ id planetsVisibleLabel
 id progress_circular
 id progress_horizontal
 id radio
+id rainDataView
+id rainDropIcon
 id right
 id right_icon
 id right_side
@@ -1221,6 +1243,7 @@ id start
 id stretch
 id submenuarrow
 id submit_area
+id sunTimesView
 id tabMode
 id tab_layout
 id tag_transition_group
@@ -1241,6 +1264,7 @@ id time
 id title
 id titleDividerNoCustom
 id title_template
+id todaysSummary
 id tool_bar
 id top
 id topPanel
@@ -1262,7 +1286,8 @@ id visible
 id waveInfo
 id waveLabel
 id weatherIcon
-id weatherInfo
+id windDirection
+id windSpeedView
 id withText
 id wrap
 id wrap_content

@@ -172,6 +172,10 @@
         "source": "/Users/david.mallon/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/44691d11e5b8a6dce9b09dc6c779b6b2/res/layout/select_dialog_singlechoice_material.xml"
     },
     {
+        "merged": "/Users/david.mallon/AndroidStudioProjects/Cushendun/app/build/intermediates/res/merged/debug/drawable_wind_dir_classic.png.flat",
+        "source": "/Users/david.mallon/AndroidStudioProjects/Cushendun/app/src/main/res/drawable/wind_dir_classic.png"
+    },
+    {
         "merged": "/Users/david.mallon/AndroidStudioProjects/Cushendun/app/build/intermediates/res/merged/debug/color_abc_primary_text_disable_only_material_light.xml.flat",
         "source": "/Users/david.mallon/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/44691d11e5b8a6dce9b09dc6c779b6b2/res/color/abc_primary_text_disable_only_material_light.xml"
     },
@@ -692,6 +696,10 @@
         "source": "/Users/david.mallon/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/521b8584ea32d70a37e612ec216f5c9e/res/anim/design_snackbar_in.xml"
     },
     {
+        "merged": "/Users/david.mallon/AndroidStudioProjects/Cushendun/app/build/intermediates/res/merged/debug/drawable_wind_direction.png.flat",
+        "source": "/Users/david.mallon/AndroidStudioProjects/Cushendun/app/src/main/res/drawable/wind_direction.png"
+    },
+    {
         "merged": "/Users/david.mallon/AndroidStudioProjects/Cushendun/app/build/intermediates/res/merged/debug/drawable-v21_abc_list_divider_material.xml.flat",
         "source": "/Users/david.mallon/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/44691d11e5b8a6dce9b09dc6c779b6b2/res/drawable-v21/abc_list_divider_material.xml"
     },
@@ -762,6 +770,10 @@
     {
         "merged": "/Users/david.mallon/AndroidStudioProjects/Cushendun/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
         "source": "/Users/david.mallon/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/44691d11e5b8a6dce9b09dc6c779b6b2/res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_light.9.png"
+    },
+    {
+        "merged": "/Users/david.mallon/AndroidStudioProjects/Cushendun/app/build/intermediates/res/merged/debug/drawable_partly_cloudy.png.flat",
+        "source": "/Users/david.mallon/AndroidStudioProjects/Cushendun/app/src/main/res/drawable/partly_cloudy.png"
     },
     {
         "merged": "/Users/david.mallon/AndroidStudioProjects/Cushendun/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_design_ic_visibility_off.png.flat",
@@ -962,6 +974,10 @@
     {
         "merged": "/Users/david.mallon/AndroidStudioProjects/Cushendun/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
         "source": "/Users/david.mallon/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/44691d11e5b8a6dce9b09dc6c779b6b2/res/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png"
+    },
+    {
+        "merged": "/Users/david.mallon/AndroidStudioProjects/Cushendun/app/build/intermediates/res/merged/debug/drawable_raindrops.png.flat",
+        "source": "/Users/david.mallon/AndroidStudioProjects/Cushendun/app/src/main/res/drawable/raindrops.png"
     },
     {
         "merged": "/Users/david.mallon/AndroidStudioProjects/Cushendun/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_star_black_48dp.png.flat",
@@ -1450,6 +1466,10 @@
     {
         "merged": "/Users/david.mallon/AndroidStudioProjects/Cushendun/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
         "source": "/Users/david.mallon/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/44691d11e5b8a6dce9b09dc6c779b6b2/res/drawable-hdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/david.mallon/AndroidStudioProjects/Cushendun/app/build/intermediates/res/merged/debug/drawable_clear_night.png.flat",
+        "source": "/Users/david.mallon/AndroidStudioProjects/Cushendun/app/src/main/res/drawable/clear_night.png"
     },
     {
         "merged": "/Users/david.mallon/AndroidStudioProjects/Cushendun/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_launcher_background.png.flat",

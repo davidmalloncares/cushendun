@@ -53,19 +53,20 @@ public class MoonFragment extends Fragment {
         return masterView;
     }
 
+    class MoonData {
+        String phase = "";
+        String datetime = "";
+
+        public void showData() {
+            String data = "Phase: "+phase+", Date/Time: "+ datetime;
+            System.out.println("Moon data= "+data);
+        }
+    }
+
     private void setMoonData(String url, final TextView moonPhases) {
         // Instantiate the RequestQueue.
         final RequestQueue queue = Volley.newRequestQueue(getActivity().getApplicationContext());
 
-        class MoonData {
-            String phase = "";
-            String datetime = "";
-
-            public void showData() {
-                String data = "Phase: "+phase+", Date/Time: "+ datetime;
-                System.out.println("Moon data= "+data);
-            }
-        }
         // Request a response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
@@ -97,7 +98,7 @@ public class MoonFragment extends Fragment {
 
                         String moonText = "";
                         for (MoonData moon : moonDataSet) {
-                            moonText += "Phase: " + moon.phase + " visible on "+moon.datetime+"\n";
+                            moonText += moon.phase + " visible on "+moon.datetime+"\n";
                         }
                         moonPhases.setText(moonText);
                     }
@@ -126,41 +127,14 @@ public class MoonFragment extends Fragment {
                         JSONObject dailyWeather = null;
                         try {
                             dailyWeather = response.getJSONObject("daily");
-                            JSONArray dataa = dailyWeather.getJSONArray("data");
+                            JSONArray daysArray = dailyWeather.getJSONArray("data");
+                            ArrayList<WeatherData> daysWeather = WeatherData.buildWeeklyWeather(daysArray);
 
-                            dailyWeather = dataa.getJSONObject(0);
+                            WeatherData todaysWeather = daysWeather.get(0);
 
                             // set moon icon
-                            String moonPhaseName = "Full Moon";
-                            float moonPhase = Float.parseFloat(dailyWeather.getString("moonPhase"));
-                            int phaseIconId = R.drawable.waning_crescent;
-                            if ((moonPhase >= 0 && moonPhase < 0.125) || moonPhase == 1.0) {
-                                phaseIconId = R.drawable.newmoon;
-                                moonPhaseName = "New Moon";
-                            } else if (moonPhase >= 0.125 && moonPhase < 0.25) {
-                                phaseIconId = R.drawable.waxing_crescent;
-                                moonPhaseName = "Waxing Crescent";
-                            } else if (moonPhase >= 0.25 && moonPhase < 0.36) {
-                                phaseIconId = R.drawable.first_quarter;
-                                moonPhaseName = "First Quarter";
-                            } else if (moonPhase >= 0.36 && moonPhase < 0.5) {
-                                phaseIconId = R.drawable.waxing_gibbous;
-                                moonPhaseName = "Waxing Gibbous";
-                            } else if (moonPhase >= 0.5  && moonPhase < 0.625) {
-                                phaseIconId = R.drawable.full_moon;
-                                moonPhaseName = "Full Moon";
-                            } else if (moonPhase >= 0.625 && moonPhase < 0.75) {
-                                phaseIconId = R.drawable.waning_gibbous;
-                                moonPhaseName = "Waning Gibbous";
-                            } else if (moonPhase >= 0.75  && moonPhase < 0.875) {
-                                phaseIconId = R.drawable.third_quarter;
-                                moonPhaseName = "Last Quarter";
-                            } else {
-                                phaseIconId = R.drawable.waning_crescent;
-                                moonPhaseName = "Waning Crescent";
-                            }
-                            moonIcon.setImageResource(phaseIconId);
-                            currentMoonLabel.setText("Current Moon Phase: "+moonPhaseName);
+                            moonIcon.setImageResource(todaysWeather.moonPhaseIconId);
+                            currentMoonLabel.setText("Current Moon Phase: "+todaysWeather.moonPhaseName);
                         } catch (JSONException e) {
                             e.printStackTrace();
                             System.out.println("Bombed out getting current moon data - "+e.getMessage());
