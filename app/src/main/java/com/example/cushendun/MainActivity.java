@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar)findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
-        tabLayout.addTab(tabLayout.newTab().setText("Home"));
+        tabLayout.addTab(tabLayout.newTab().setText("Weather"));
         tabLayout.addTab(tabLayout.newTab().setText("Moon"));
         tabLayout.addTab(tabLayout.newTab().setText("Tides"));
         tabLayout.addTab(tabLayout.newTab().setText("Planets"));

@@ -71,9 +71,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                         String sunData = "";
                         try {
                             weeklyWeather = response.getJSONObject("daily");
-                            //System.out.println("full weeklyWeather="+weeklyWeather);
-                            //hourlyWeather = response.getJSONObject("hourly");
-                            //System.out.println("hourlyWeather="+hourlyWeather+"<");
                             JSONArray daysArray = weeklyWeather.getJSONArray("data");
                             ArrayList<WeatherData> daysWeather = WeatherData.buildWeeklyWeather(daysArray);
 
