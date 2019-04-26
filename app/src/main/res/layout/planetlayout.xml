@@ -1,40 +1,668 @@
-<?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/constraintLayout4"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:id="@+id/tableLayout2"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
 
     <TextView
-        android:id="@+id/planetsVisibleLabel"
-        android:layout_width="395dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:text="Planets visible today/tonight"
-        android:textSize="18sp"
-        app:fontFamily="sans-serif-medium"
+        android:id="@+id/topBlankRow"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_horizontal"
+        android:text=""
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <TextView
-        android:id="@+id/planetsVisible"
-        android:layout_width="394dp"
-        android:layout_height="653dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:id="@+id/textView2"
+        android:layout_width="390dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:text="Planets visible today/tonight"
-        app:fontFamily="sans-serif-medium"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Planets Visible Today/Tonight"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/topBlankRow"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topBlankRow" />
+
+
+    <TextView
+        android:id="@+id/lowerBlankRow"
+        android:layout_width="273dp"
+        android:layout_height="5dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_horizontal"
+        android:text=""
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/planetsVisibleLabel" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="40dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lowerBlankRow" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="60dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        android:text="Planet"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/lowerBlankRow" />
+
+
+    <ImageView
+        android:id="@+id/planetIcon0"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/planetName0"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/planetIcon0"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/planetSet0"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/planetRise0"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="40dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        android:text="From"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/lowerBlankRow" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="35dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        android:text="To"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/lowerBlankRow" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="60dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        android:text="Meridian"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/lowerBlankRow" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="130dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:maxLines="2"
+        android:padding="2dip"
+        android:text="Comments"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/lowerBlankRow" />
+
+    <TextView
+        android:id="@+id/planetRise0"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/planetName0"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/planetMeridian0"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/planetSet0"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/planetComments0"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:width="0dip"
+        android:padding="2dip"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/planetMeridian0"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <ImageView
+        android:id="@+id/planetIcon1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/planetIcon0" />
+
+    <TextView
+        android:id="@+id/planetName1"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/planetIcon1"
+        app:layout_constraintTop_toBottomOf="@+id/planetName0" />
+
+    <TextView
+        android:id="@+id/planetRise1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/planetName1"
+        app:layout_constraintTop_toBottomOf="@+id/planetRise0" />
+
+    <TextView
+        android:id="@+id/planetSet1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/planetRise1"
+        app:layout_constraintTop_toBottomOf="@+id/planetSet0" />
+
+    <TextView
+        android:id="@+id/planetMeridian1"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/planetSet1"
+        app:layout_constraintTop_toBottomOf="@+id/planetMeridian0" />
+
+    <TextView
+        android:id="@+id/planetComments1"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:width="0dip"
+        android:padding="2dip"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/planetMeridian1"
+        app:layout_constraintTop_toBottomOf="@+id/planetComments0" />
+
+    <ImageView
+        android:id="@+id/planetIcon2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/planetIcon1" />
+
+    <TextView
+        android:id="@+id/planetName2"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/planetIcon2"
+        app:layout_constraintTop_toBottomOf="@+id/planetName1" />
+
+    <TextView
+        android:id="@+id/planetRise2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/planetName2"
+        app:layout_constraintTop_toBottomOf="@+id/planetRise1" />
+
+    <TextView
+        android:id="@+id/planetSet2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/planetRise2"
+        app:layout_constraintTop_toBottomOf="@+id/planetSet1" />
+
+    <TextView
+        android:id="@+id/planetMeridian2"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/planetSet2"
+        app:layout_constraintTop_toBottomOf="@+id/planetMeridian1" />
+
+    <TextView
+        android:id="@+id/planetComments2"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:width="0dip"
+        android:padding="2dip"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/planetMeridian2"
+        app:layout_constraintTop_toBottomOf="@+id/planetComments1" />
+
+    <ImageView
+        android:id="@+id/planetIcon3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/planetIcon2" />
+
+    <TextView
+        android:id="@+id/planetName3"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/planetIcon3"
+        app:layout_constraintTop_toBottomOf="@+id/planetName2" />
+
+    <TextView
+        android:id="@+id/planetRise3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/planetName3"
+        app:layout_constraintTop_toBottomOf="@+id/planetRise2" />
+
+    <TextView
+        android:id="@+id/planetSet3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/planetRise3"
+        app:layout_constraintTop_toBottomOf="@+id/planetSet2" />
+
+    <TextView
+        android:id="@+id/planetMeridian3"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/planetSet3"
+        app:layout_constraintTop_toBottomOf="@+id/planetMeridian2" />
+
+    <TextView
+        android:id="@+id/planetComments3"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:width="0dip"
+        android:padding="2dip"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/planetMeridian3"
+        app:layout_constraintTop_toBottomOf="@+id/planetComments2" />
+
+    <ImageView
+        android:id="@+id/planetIcon4"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/planetIcon3" />
+
+    <TextView
+        android:id="@+id/planetName4"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/planetIcon4"
+        app:layout_constraintTop_toBottomOf="@+id/planetName3" />
+
+    <TextView
+        android:id="@+id/planetRise4"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/planetName4"
+        app:layout_constraintTop_toBottomOf="@+id/planetRise3" />
+
+    <TextView
+        android:id="@+id/planetSet4"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/planetRise4"
+        app:layout_constraintTop_toBottomOf="@+id/planetSet3" />
+
+    <TextView
+        android:id="@+id/planetMeridian4"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/planetSet4"
+        app:layout_constraintTop_toBottomOf="@+id/planetMeridian3" />
+
+    <TextView
+        android:id="@+id/planetComments4"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:width="0dip"
+        android:padding="2dip"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/planetMeridian4"
+        app:layout_constraintTop_toBottomOf="@+id/planetComments3" />
+
+    <ImageView
+        android:id="@+id/planetIcon5"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/planetIcon4" />
+
+    <TextView
+        android:id="@+id/planetName5"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/planetIcon5"
+        app:layout_constraintTop_toBottomOf="@+id/planetName4" />
+
+    <TextView
+        android:id="@+id/planetRise5"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/planetName5"
+        app:layout_constraintTop_toBottomOf="@+id/planetRise4" />
+
+    <TextView
+        android:id="@+id/planetSet5"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/planetRise5"
+        app:layout_constraintTop_toBottomOf="@+id/planetSet4" />
+
+    <TextView
+        android:id="@+id/planetMeridian5"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/planetSet5"
+        app:layout_constraintTop_toBottomOf="@+id/planetMeridian4" />
+
+    <TextView
+        android:id="@+id/planetComments5"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:width="0dip"
+        android:padding="2dip"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/planetMeridian5"
+        app:layout_constraintTop_toBottomOf="@+id/planetComments4" />
+
+    <ImageView
+        android:id="@+id/planetIcon6"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/planetIcon5" />
+
+    <TextView
+        android:id="@+id/planetName6"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/planetIcon6"
+        app:layout_constraintTop_toBottomOf="@+id/planetName5" />
+
+    <TextView
+        android:id="@+id/planetRise6"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/planetName6"
+        app:layout_constraintTop_toBottomOf="@+id/planetRise5" />
+
+    <TextView
+        android:id="@+id/planetSet6"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/planetRise6"
+        app:layout_constraintTop_toBottomOf="@+id/planetSet5" />
+
+    <TextView
+        android:id="@+id/planetMeridian6"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="2dip"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/planetSet6"
+        app:layout_constraintTop_toBottomOf="@+id/planetMeridian5" />
+
+    <TextView
+        android:id="@+id/planetComments6"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:width="0dip"
+        android:padding="2dip"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/planetMeridian6"
+        app:layout_constraintTop_toBottomOf="@+id/planetComments5" />
+
 </android.support.constraint.ConstraintLayout>
