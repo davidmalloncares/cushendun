@@ -8,25 +8,6 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/tideInfo"
-        android:layout_width="356dp"
-        android:layout_height="74dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:text="Todays tide info "
-        android:textSize="14sp"
-        app:fontFamily="sans-serif-medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tideLabel"
-        tools:layout_conversion_absoluteHeight="0dp"
-        tools:layout_conversion_absoluteWidth="0dp" />
-
-    <TextView
         android:id="@+id/tideLabel"
         android:layout_width="314dp"
         android:layout_height="40dp"
@@ -52,32 +33,250 @@
         android:layout_height="39dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:text="Wave Information"
+        android:text="Current Sea Conditions"
         android:textSize="18sp"
         app:fontFamily="sans-serif-medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tideInfo" />
+        app:layout_constraintTop_toBottomOf="@+id/tideIcon3" />
+
+    <ImageView
+        android:id="@+id/tideIcon0"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tideLabel"
+        app:srcCompat="@drawable/high_tide" />
 
     <TextView
-        android:id="@+id/waveInfo"
-        android:layout_width="357dp"
-        android:layout_height="173dp"
+        android:id="@+id/tideType0"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/tideIcon0"
+        app:layout_constraintTop_toBottomOf="@+id/tideLabel" />
+
+    <TextView
+        android:id="@+id/tideTime0"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/tideType0"
+        app:layout_constraintTop_toBottomOf="@+id/tideLabel" />
+
+    <ImageView
+        android:id="@+id/tideIcon1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tideIcon0"
+        app:srcCompat="@drawable/high_tide" />
+
+    <TextView
+        android:id="@+id/tideType1"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:text="Wave height and water temp"
-        android:textSize="14sp"
-        app:fontFamily="sans-serif-medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/tideIcon1"
+        app:layout_constraintTop_toBottomOf="@+id/tideType0" />
+
+    <TextView
+        android:id="@+id/tideTime1"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/tideType1"
+        app:layout_constraintTop_toBottomOf="@+id/tideTime0" />
+
+    <ImageView
+        android:id="@+id/tideIcon2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tideIcon1"
+        app:srcCompat="@drawable/high_tide" />
+
+    <TextView
+        android:id="@+id/tideType2"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/tideIcon2"
+        app:layout_constraintTop_toBottomOf="@+id/tideType1" />
+
+    <TextView
+        android:id="@+id/tideTime2"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/tideType2"
+        app:layout_constraintTop_toBottomOf="@+id/tideTime1" />
+
+    <ImageView
+        android:id="@+id/tideIcon3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tideIcon2"
+        app:srcCompat="@drawable/high_tide" />
+
+    <TextView
+        android:id="@+id/tideType3"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/tideIcon3"
+        app:layout_constraintTop_toBottomOf="@+id/tideType2" />
+
+    <TextView
+        android:id="@+id/tideTime3"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/tideType3"
+        app:layout_constraintTop_toBottomOf="@+id/tideTime2" />
+
+    <TextView
+        android:id="@+id/tideHeight0"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/tideTime0"
+        app:layout_constraintTop_toBottomOf="@+id/tideLabel" />
+
+    <TextView
+        android:id="@+id/tideHeight1"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/tideTime1"
+        app:layout_constraintTop_toBottomOf="@+id/tideHeight0" />
+
+    <TextView
+        android:id="@+id/tideHeight2"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/tideTime2"
+        app:layout_constraintTop_toBottomOf="@+id/tideHeight1" />
+
+    <TextView
+        android:id="@+id/tideHeight3"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/tideTime3"
+        app:layout_constraintTop_toBottomOf="@+id/tideHeight2" />
+
+    <ImageView
+        android:id="@+id/seaLevelIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/waveLabel"
+        app:srcCompat="@drawable/sea_level2" />
+
+    <TextView
+        android:id="@+id/seaLevelView"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/seaLevelIcon"
         app:layout_constraintTop_toBottomOf="@+id/waveLabel" />
+
+    <ImageView
+        android:id="@+id/seaTempIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seaLevelIcon"
+        app:srcCompat="@drawable/sea_temp" />
+
+    <TextView
+        android:id="@+id/seaTempView"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/seaTempIcon"
+        app:layout_constraintTop_toBottomOf="@+id/seaLevelView" />
+
+    <ImageView
+        android:id="@+id/waveHeightIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seaTempIcon"
+        app:srcCompat="@drawable/wave" />
+
+    <TextView
+        android:id="@+id/waveHeightView"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/waveHeightIcon"
+        app:layout_constraintTop_toBottomOf="@+id/seaTempView" />
 
 </android.support.constraint.ConstraintLayout>

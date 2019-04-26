@@ -51,7 +51,7 @@ public class WeatherData {
             long sunSetEpoch = Long.parseLong( json.getString("sunsetTime") );
             Date sunsetTime = new Date( sunSetEpoch * 1000 );
 
-            SimpleDateFormat formatter= new SimpleDateFormat("hh:mm:ss a");
+            SimpleDateFormat formatter= new SimpleDateFormat("h:mm:ss a");
             sunRise = formatter.format(sunriseTime);
             sunSet = formatter.format(sunsetTime);
 
@@ -107,7 +107,7 @@ public class WeatherData {
                 moonPhaseName = "Waning Crescent";
             }
         } catch (JSONException e) {
-            e.printStackTrace();
+            System.out.println("Failed getting weather data - " +e.getMessage());
         }
 
         switch(weatherIcon) {
