@@ -24,10 +24,10 @@
     <TextView
         android:id="@+id/upcomingMoonLabel"
         android:layout_width="395dp"
-        android:layout_height="47dp"
+        android:layout_height="27dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:text="Moon Phases during this period"
@@ -41,16 +41,17 @@
     <TextView
         android:id="@+id/upcomingMoonPhases"
         android:layout_width="383dp"
-        android:layout_height="221dp"
+        android:layout_height="114dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:text="Moon phases during this period"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/upcomingMoonLabel" />
+        app:layout_constraintTop_toBottomOf="@+id/moonDate0" />
 
     <TextView
         android:id="@+id/currentMoonLabel"
@@ -66,4 +67,153 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/moonType0"
+        android:layout_width="90dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Waning Gibbous"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upcomingMoonLabel" />
+
+    <TextView
+        android:id="@+id/moonType1"
+        android:layout_width="90dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/moonType0"
+        app:layout_constraintTop_toBottomOf="@+id/upcomingMoonLabel" />
+
+    <TextView
+        android:id="@+id/moonType2"
+        android:layout_width="90dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/moonType1"
+        app:layout_constraintTop_toBottomOf="@+id/upcomingMoonLabel" />
+
+    <TextView
+        android:id="@+id/moonType3"
+        android:layout_width="90dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/moonType2"
+        app:layout_constraintTop_toBottomOf="@+id/upcomingMoonLabel" />
+
+    <ImageView
+        android:id="@+id/moonIcon0"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moonType0"
+        app:srcCompat="@drawable/full_moon" />
+
+    <ImageView
+        android:id="@+id/moonIcon1"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/moonIcon0"
+        app:layout_constraintTop_toBottomOf="@+id/moonType1"
+        app:srcCompat="@drawable/full_moon" />
+
+    <ImageView
+        android:id="@+id/moonIcon2"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/moonIcon1"
+        app:layout_constraintTop_toBottomOf="@+id/moonType2"
+        app:srcCompat="@drawable/full_moon" />
+
+    <ImageView
+        android:id="@+id/moonIcon3"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/moonIcon2"
+        app:layout_constraintTop_toBottomOf="@+id/moonType3"
+        app:srcCompat="@drawable/full_moon" />
+
+    <TextView
+        android:id="@+id/moonDate0"
+        android:layout_width="90dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moonIcon0" />
+
+    <TextView
+        android:id="@+id/moonDate1"
+        android:layout_width="90dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/moonDate0"
+        app:layout_constraintTop_toBottomOf="@+id/moonIcon1" />
+
+    <TextView
+        android:id="@+id/moonDate2"
+        android:layout_width="90dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/moonDate1"
+        app:layout_constraintTop_toBottomOf="@+id/moonIcon2" />
+
+    <TextView
+        android:id="@+id/moonDate3"
+        android:layout_width="90dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/moonDate2"
+        app:layout_constraintTop_toBottomOf="@+id/moonIcon3" />
 </android.support.constraint.ConstraintLayout>

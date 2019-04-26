@@ -96,16 +96,18 @@ public class WeatherData {
             } else if (moonPhase >= 0.5  && moonPhase < 0.625) {
                 moonPhaseIconId = R.drawable.full_moon;
                 moonPhaseName = "Full Moon";
-            } else if (moonPhase >= 0.625 && moonPhase < 0.75) {
+            } else if (moonPhase >= 0.625 && moonPhase < 0.74) {
                 moonPhaseIconId = R.drawable.waning_gibbous;
                 moonPhaseName = "Waning Gibbous";
-            } else if (moonPhase >= 0.75  && moonPhase < 0.875) {
+            } else if (moonPhase >= 0.74  && moonPhase < 0.86) {
                 moonPhaseIconId = R.drawable.third_quarter;
                 moonPhaseName = "Last Quarter";
             } else {
                 moonPhaseIconId = R.drawable.waning_crescent;
                 moonPhaseName = "Waning Crescent";
             }
+
+            //System.out.println("moonPhase="+moonPhase+", moonPhaseName="+moonPhaseName + ", for "+daysDate);
         } catch (JSONException e) {
             System.out.println("Failed getting weather data - " +e.getMessage());
         }
@@ -158,6 +160,10 @@ public class WeatherData {
         cal.setTime(date);
         int day = cal.get(Calendar.DAY_OF_MONTH);
 
+        return getDayNumberSuffixFromDay(day);
+    }
+
+    public static String getDayNumberSuffixFromDay(int day) {
         if (day >= 11 && day <= 13) {
             return "th";
         }

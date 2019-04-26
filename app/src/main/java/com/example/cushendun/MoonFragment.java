@@ -90,10 +90,8 @@ public class MoonFragment extends Fragment {
                         cols = rows.get(2).select("td");
                         for (int i = 0; i < cols.size(); i++) {
                             MoonData moonData = moonDataSet.get(i);
-                            String dateTime = cols.get(i).text();
-                            int splitPoint = dateTime.indexOf(":")+3;
-                            dateTime = dateTime.substring(0, splitPoint);
-                            moonData.datetime = dateTime;
+                            String moonDate = getMoonDate(cols.get(i).text());
+                            moonData.datetime = moonDate;
                         }
 
                         String moonText = "";
@@ -101,6 +99,48 @@ public class MoonFragment extends Fragment {
                             moonText += moon.phase + " visible on "+moon.datetime+"\n";
                         }
                         moonPhases.setText(moonText);
+
+                        for (int i = 0; i < moonDataSet.size(); i++) {
+                            // set type
+                            int moonTypeId = getResources().getIdentifier(
+                                    "moonType"+i,
+                                    "id",
+                                    getActivity().getPackageName()
+                            );
+                            TextView moonTypeView = masterView.findViewById(moonTypeId);
+                            moonTypeView.setText(moonDataSet.get(i).phase);
+
+                            // set icon
+                            int moonIconId = getResources().getIdentifier(
+                                    "moonIcon"+i,
+                                    "id",
+                                    getActivity().getPackageName()
+                            );
+                            ImageView moonIconView = masterView.findViewById(moonIconId);
+                            moonIconView.setImageResource(getMoonPhaseByType(moonDataSet.get(i).phase));
+
+                            // set date
+                            int moonDateId = getResources().getIdentifier(
+                                    "moonDate"+i,
+                                    "id",
+                                    getActivity().getPackageName()
+                            );
+                            TextView moonDateView = masterView.findViewById(moonDateId);
+                            moonDateView.setText(moonDataSet.get(i).datetime);
+                        }
+                    }
+
+                    private String getMoonDate(String dateTime) {
+                        // drop down to dd mmm
+                        int splitPoint = dateTime.indexOf(":")-3;
+                        dateTime = dateTime.substring(0, splitPoint);
+
+                        // get the day number and add the suffix
+                        splitPoint = dateTime.indexOf(" ");
+                        String dayPart = dateTime.substring(0, splitPoint);
+                        String suffix = WeatherData.getDayNumberSuffixFromDay(Integer.parseInt(dayPart));
+                        dateTime = dateTime.replace(dayPart, dayPart+suffix);
+                        return dateTime;
                     }
                 }, new Response.ErrorListener() {
             @Override
@@ -111,6 +151,27 @@ public class MoonFragment extends Fragment {
 
         // Add the request to the RequestQueue.
         queue.add(stringRequest);
+    }
+
+    private int getMoonPhaseByType(String phase) {
+        int moonPhaseIconId;
+        switch(phase) {
+            case "Full Moon":
+                moonPhaseIconId = R.drawable.full_moon;
+                break;
+            case "Third Quarter":
+                moonPhaseIconId = R.drawable.third_quarter;
+                break;
+            case "New Moon":
+                moonPhaseIconId = R.drawable.newmoon;
+                break;
+            case "First Quarter":
+                moonPhaseIconId = R.drawable.first_quarter;
+                break;
+            default:
+                moonPhaseIconId = R.drawable.full_moon;
+        }
+        return moonPhaseIconId;
     }
 
     private void setMoonPhase(String url, final TextView currentMoonLabel, final ImageView moonIcon) {
