@@ -46,171 +46,219 @@
 
     <ImageView
         android:id="@+id/tideIcon0"
-        android:layout_width="40dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/tideType0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tideLabel"
         app:srcCompat="@drawable/high_tide" />
 
     <TextView
         android:id="@+id/tideType0"
-        android:layout_width="70dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        app:layout_constraintEnd_toStartOf="@+id/tideTime0"
         app:layout_constraintStart_toEndOf="@+id/tideIcon0"
         app:layout_constraintTop_toBottomOf="@+id/tideLabel" />
 
     <TextView
         android:id="@+id/tideTime0"
-        android:layout_width="150dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginStart="2dp"
         android:layout_marginLeft="2dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/tideHeight0"
         app:layout_constraintStart_toEndOf="@+id/tideType0"
         app:layout_constraintTop_toBottomOf="@+id/tideLabel" />
 
     <ImageView
         android:id="@+id/tideIcon1"
-        android:layout_width="40dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/tideType1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tideIcon0"
         app:srcCompat="@drawable/high_tide" />
 
     <TextView
         android:id="@+id/tideType1"
-        android:layout_width="70dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
         android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/tideTime1"
         app:layout_constraintStart_toEndOf="@+id/tideIcon1"
         app:layout_constraintTop_toBottomOf="@+id/tideType0" />
 
     <TextView
         android:id="@+id/tideTime1"
-        android:layout_width="150dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginStart="2dp"
         android:layout_marginLeft="2dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/tideHeight1"
         app:layout_constraintStart_toEndOf="@+id/tideType1"
         app:layout_constraintTop_toBottomOf="@+id/tideTime0" />
 
     <ImageView
         android:id="@+id/tideIcon2"
-        android:layout_width="40dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/tideType2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tideIcon1"
         app:srcCompat="@drawable/high_tide" />
 
     <TextView
         android:id="@+id/tideType2"
-        android:layout_width="70dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
         android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/tideTime2"
         app:layout_constraintStart_toEndOf="@+id/tideIcon2"
         app:layout_constraintTop_toBottomOf="@+id/tideType1" />
 
     <TextView
         android:id="@+id/tideTime2"
-        android:layout_width="150dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginStart="2dp"
         android:layout_marginLeft="2dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/tideHeight2"
         app:layout_constraintStart_toEndOf="@+id/tideType2"
         app:layout_constraintTop_toBottomOf="@+id/tideTime1" />
 
     <ImageView
         android:id="@+id/tideIcon3"
-        android:layout_width="40dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/tideType3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tideIcon2"
         app:srcCompat="@drawable/high_tide" />
 
     <TextView
         android:id="@+id/tideType3"
-        android:layout_width="70dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
         android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/tideTime3"
         app:layout_constraintStart_toEndOf="@+id/tideIcon3"
         app:layout_constraintTop_toBottomOf="@+id/tideType2" />
 
     <TextView
         android:id="@+id/tideTime3"
-        android:layout_width="150dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginStart="2dp"
         android:layout_marginLeft="2dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/tideHeight3"
         app:layout_constraintStart_toEndOf="@+id/tideType3"
         app:layout_constraintTop_toBottomOf="@+id/tideTime2" />
 
     <TextView
         android:id="@+id/tideHeight0"
-        android:layout_width="70dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tideTime0"
         app:layout_constraintTop_toBottomOf="@+id/tideLabel" />
 
     <TextView
         android:id="@+id/tideHeight1"
-        android:layout_width="70dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tideTime1"
         app:layout_constraintTop_toBottomOf="@+id/tideHeight0" />
 
     <TextView
         android:id="@+id/tideHeight2"
-        android:layout_width="70dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tideTime2"
         app:layout_constraintTop_toBottomOf="@+id/tideHeight1" />
 
     <TextView
         android:id="@+id/tideHeight3"
-        android:layout_width="70dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tideTime3"
         app:layout_constraintTop_toBottomOf="@+id/tideHeight2" />
 
@@ -232,6 +280,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
+        android:text="Sea level in meters"
         app:layout_constraintStart_toEndOf="@+id/seaLevelIcon"
         app:layout_constraintTop_toBottomOf="@+id/waveLabel" />
 
@@ -253,7 +302,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:text="TextView"
+        android:text="Sea temperature"
         app:layout_constraintStart_toEndOf="@+id/seaTempIcon"
         app:layout_constraintTop_toBottomOf="@+id/seaLevelView" />
 
@@ -275,7 +324,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:text="TextView"
+        android:text="Wave height in meters"
         app:layout_constraintStart_toEndOf="@+id/waveHeightIcon"
         app:layout_constraintTop_toBottomOf="@+id/seaTempView" />
 

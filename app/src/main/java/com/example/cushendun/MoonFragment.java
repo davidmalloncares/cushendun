@@ -43,12 +43,11 @@ public class MoonFragment extends Fragment {
 
         TextView currentMoonLabel = masterView.findViewById(R.id.currentMoonLabel);
         ImageView moonIcon = masterView.findViewById(R.id.currentMoonIcon);
-        TextView moonPhases = masterView.findViewById(R.id.upcomingMoonPhases);
         setMoonPhase(weather_url, currentMoonLabel, moonIcon);
 
         // set data for future moon phases
         String moonDataUrl = "https://www.timeanddate.com/moon/phases/uk/belfast";
-        setMoonData(moonDataUrl, moonPhases);
+        setMoonData(moonDataUrl);
 
         return masterView;
     }
@@ -63,7 +62,7 @@ public class MoonFragment extends Fragment {
         }
     }
 
-    private void setMoonData(String url, final TextView moonPhases) {
+    private void setMoonData(String url) {
         // Instantiate the RequestQueue.
         final RequestQueue queue = Volley.newRequestQueue(getActivity().getApplicationContext());
 
@@ -93,12 +92,6 @@ public class MoonFragment extends Fragment {
                             String moonDate = getMoonDate(cols.get(i).text());
                             moonData.datetime = moonDate;
                         }
-
-                        String moonText = "";
-                        for (MoonData moon : moonDataSet) {
-                            moonText += moon.phase + " visible on "+moon.datetime+"\n";
-                        }
-                        moonPhases.setText(moonText);
 
                         for (int i = 0; i < moonDataSet.size(); i++) {
                             // set type

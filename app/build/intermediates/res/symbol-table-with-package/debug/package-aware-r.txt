@@ -1371,7 +1371,6 @@ id uniform
 id unlabeled
 id up
 id upcomingMoonLabel
-id upcomingMoonPhases
 id useLogo
 id view_offset_helper
 id view_pager
