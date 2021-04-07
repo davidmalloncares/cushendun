@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Cushendun</string>
+    <string name="planets_visible_today_tonight">Planets Visible Today/Tonight</string>
+    <string name="planet">Planet</string>
 </resources>

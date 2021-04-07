@@ -1,4 +1,4 @@
-#Sat Apr 27 18:18:19 BST 2019
-base.0=/Users/david.mallon/AndroidStudioProjects/Cushendun/app/build/intermediates/dex/debug/mergeDexDebug/out
+#Wed Apr 07 10:57:46 BST 2021
+base.0=/Users/david.mallon/AndroidStudioProjects/Cushendun/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

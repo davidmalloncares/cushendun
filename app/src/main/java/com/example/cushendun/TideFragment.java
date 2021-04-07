@@ -70,7 +70,7 @@ public class TideFragment extends Fragment {
         if (waveHeight == null || waterTemp == null|| seaLevel == null) {
             setWaveData(wave_url, wave_api_key);
         } else {
-            System.out.println("already got wave data");
+            //System.out.println("already got wave data");
             displaySeaData();
         }
     }
@@ -196,7 +196,6 @@ public class TideFragment extends Fragment {
                         TextView tideHeight = masterView.findViewById(tideHeightId);
                         tideHeight.setText(getTideHeightText(height));
                     } catch (JSONException | ParseException e) {
-                        e.printStackTrace();
                         System.out.println("Error getting tide data - "+e.getMessage());
                     }
                 }
