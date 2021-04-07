@@ -25,6 +25,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class MoonFragment extends Fragment {
 
@@ -73,9 +74,23 @@ public class MoonFragment extends Fragment {
                     public void onResponse(String response) {
 
                         Document doc = Jsoup.parse(response);
-                        Element table = doc.getElementById("mn-cyc");
-                        Elements rows = table.select("tr");
 
+                        Elements moonPhaseCards = doc.getElementsByClass("moon-phases-card");
+                        Iterator<Element> moonPhaseIter = moonPhaseCards.iterator();
+
+                        ArrayList<MoonData> moonDataSet = new ArrayList<MoonData>(moonPhaseCards.size());
+                        while (moonPhaseIter.hasNext()) {
+                            Element moonPhaseCard = moonPhaseIter.next();
+                            MoonData moonData = new MoonData();
+
+                            moonData.phase = moonPhaseCard.select("a").first().text();
+
+                            String moonDate = moonPhaseCard.getElementsByClass("moon-phases-card__date").text();
+                            moonData.datetime = moonDate;
+                            moonDataSet.add(moonData);
+                        }
+
+                        /*
                         //System.out.println("table data="+table.toString()+", rows="+rows.size());
                         ArrayList<MoonData> moonDataSet = new ArrayList<MoonData>(rows.size());
 
@@ -92,7 +107,7 @@ public class MoonFragment extends Fragment {
                             String moonDate = getMoonDate(cols.get(i).text());
                             moonData.datetime = moonDate;
                         }
-
+*/
                         for (int i = 0; i < moonDataSet.size(); i++) {
                             // set type
                             int moonTypeId = getResources().getIdentifier(

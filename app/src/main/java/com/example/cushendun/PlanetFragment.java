@@ -59,7 +59,8 @@ public class PlanetFragment extends Fragment {
                     @Override
                     public void onResponse(String response) {
                         Document doc = Jsoup.parse(response);
-                        Element table = doc.select("table").get(0); //select the first table.
+
+                        Element table = doc.select("table").get(1); //select the first table.
                         Elements rows = table.select("tr");
 
                         ArrayList<PlanetData> planets = new ArrayList<PlanetData>();

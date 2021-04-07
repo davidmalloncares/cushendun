@@ -196,7 +196,6 @@ public class TideFragment extends Fragment {
                         TextView tideHeight = masterView.findViewById(tideHeightId);
                         tideHeight.setText(getTideHeightText(height));
                     } catch (JSONException | ParseException e) {
-                        e.printStackTrace();
                         System.out.println("Error getting tide data - "+e.getMessage());
                     }
                 }
