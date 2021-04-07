@@ -70,7 +70,7 @@ public class TideFragment extends Fragment {
         if (waveHeight == null || waterTemp == null|| seaLevel == null) {
             setWaveData(wave_url, wave_api_key);
         } else {
-            System.out.println("already got wave data");
+            //System.out.println("already got wave data");
             displaySeaData();
         }
     }
